@@ -1,0 +1,51 @@
+/*ul styles*/
+ul.unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /*005bd9*/
+  background-image: linear-gradient(to bottom right, #086fd4, #086fd4);
+}
+
+nav li {
+  float: left;
+}
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  background-color: #e3f2fd;
+}
+
+nav button {
+  margin-top: 5px;
+}
+
+/*Style for Login buttons*/
+.login {
+  background-color: #086fd4;
+  color: white;
+}
+.login:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  color: white;
+  background-color: #086fd4;
+}
+.liright {
+  float: right;
+}
