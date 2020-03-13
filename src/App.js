@@ -20,6 +20,7 @@ function App(props) {
   let username = "";
   const setUsername = () => {
     if (profile) {
+      console.log(profile);
       if (profile.given_name) username = profile.given_name;
       else if (profile.nickname) username = profile.nickname;
       else if (profile.name) username = profile.name;

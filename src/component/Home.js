@@ -21,7 +21,7 @@ const Home = props => {
         {!authenticated ? (
           <h5>Please login first to use the Budget Calculator</h5>
         ) : (
-          <h5>{`Welcome! ${props.username}`}</h5>
+          <h5>Welcome! {props.username}</h5>
         )}
       </div>
       {authenticated ? (

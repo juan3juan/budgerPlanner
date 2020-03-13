@@ -47,8 +47,11 @@ const Budget = props => {
       }
     }
   };
-  const handleSubmit = () => {
-    setdoneStatus(true);
+  const handleSubmit = e => {
+    e.preventDefault();
+    if (values.salary === null || values.salary === "")
+      setValues({ ...values, errormessage: "Please input salary first!" });
+    else setdoneStatus(true);
   };
   const handleback = () => {
     setdoneStatus(false);
