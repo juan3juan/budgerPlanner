@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../css/nav.css";
 const Nav = props => {
+  const { isAuthenticated, login, logout } = props.auth;
+  const authenticated = isAuthenticated();
   return (
     <nav>
       <ul>
@@ -12,7 +14,18 @@ const Nav = props => {
           <Link to="/budget">Budget</Link>
         </li>
         <li className="liright">
-          <button className="btn login">Log in ></button>
+          {authenticated ? (
+            <button className="btn login" onClick={logout}>
+              Log out >
+            </button>
+          ) : (
+            <button className="btn login" onClick={login}>
+              Log in >
+            </button>
+          )}
+        </li>
+        <li className="liright greetings">
+          {authenticated ? <p>Welcome! {props.username}</p> : null}
         </li>
       </ul>
     </nav>

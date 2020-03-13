@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../css/planner.css";
 import {
   Slider,
@@ -75,7 +75,7 @@ const BudgetCalculator = props => {
           <button
             type="button"
             className="btn buttoncolor"
-            onClick={props.handlesubmit}
+            onClick={props.handleSubmit}
           >
             Done Calculation
           </button>

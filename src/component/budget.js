@@ -11,6 +11,7 @@ const Budget = props => {
     percent: 15,
     errormessage: ""
   });
+
   const [donestatus, setdoneStatus] = useState(false);
   //#endregion
 
@@ -46,7 +47,7 @@ const Budget = props => {
       }
     }
   };
-  const handlesubmit = () => {
+  const handleSubmit = () => {
     setdoneStatus(true);
   };
   const handleback = () => {
@@ -65,7 +66,7 @@ const Budget = props => {
     <BudgetPlanner
       initialValues={values}
       percentageChange={percentageChange}
-      handlesubmit={handlesubmit}
+      handleSubmit={handleSubmit}
       handleChange={handleChange}
     />
   );
