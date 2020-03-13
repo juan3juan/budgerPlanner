@@ -49,3 +49,10 @@ nav button {
 .liright {
   float: right;
 }
+
+/*Style for greetings*/
+.greetings {
+  padding-top: 14px;
+  padding-right: 20px;
+  color: white;
+}
