@@ -1,68 +1,47 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Budget Planner deployment explanation on github Pages
 
-In the project directory, you can run:
+After git clone the master branch to your local, in the project directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Notice, you need to update the callback url and redirect url in the .env to: http://localhost:3000 to make it work
 
-### `npm test`
+### `npm run deploy`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This will deploy the project into github page in your repository.
+open [http://gitUserName.github.io/yourrepository] to view it in the browser.
 
-### `npm run build`
+Notice: since github page doesn't run project under root level, you need to change the following environment variable in the .env before deployment:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+REACT_APP_AUTH0_CALLBACK_URL: [http://gitUserName.github.io/yourrepository]
+REACT_APP_AUTH0_RETURNTO_URL: [http://gitUserName.github.io/yourrepository]
+REACT_APP_REPOSITORY: yourrepository
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+You also need to change the homepage in package.json:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+"homepage": [http://gitUserName.github.io/yourrepository]
 
-### `npm run eject`
+You can reference this tutorial for more details for github page deployment:
+[https://create-react-app.dev/docs/deployment/](https://create-react-app.dev/docs/deployment/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+I deployed this project to this github page for your reference: [http://juan3juan.github.io/budgetPlanner](http://juan3juan.github.io/budgetPlanner)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `npm run dev`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+For local test, please use npm run dev
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+As this app uses Auth0 for authentication, in order to run the code in your local environment, you need to register Auth0 [Auth0](https://auth0.com/signup?&signUpData=%7B%22category%22%3A%22button%22%7D) and create Application with REACT_APP_AUTH0_CALLBACK_URL=http://localhost:3000 and REACT_APP_AUTH0_RETURNTO_URL=REACT_APP_AUTH0_CALLBACK_URL=http://localhost:3000
 
-## Learn More
+## Deploy to Heroku
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can also deploy this project to Heroku using Heroku Dashboard or Heroku CLI
+Please reference this tutorial for Heroku deployment: [https://blog.heroku.com/deploying-react-with-zero-configuration](https://blog.heroku.com/deploying-react-with-zero-configuration)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Notice, you can delete the REACT_APP_REPOSITORY in the .env file and the homepage in package.json since Heroku can run under root. .env file can also be deleted since you can add env variables through Heroku Dashboard or CLI
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+I also deployed this project to heroku for your reference: [https://budger-planner-heroku.herokuapp.com/](https://budger-planner-heroku.herokuapp.com/)
