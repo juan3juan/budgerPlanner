@@ -33,7 +33,7 @@ REACT_APP_AUTH0_CALLBACK_URL: http://gitUserName.github.io/yourrepository <br />
 REACT_APP_AUTH0_RETURNTO_URL: http://gitUserName.github.io/yourrepository <br />
 REACT_APP_REPOSITORY: yourrepository <br />
 
-_I set the callback url to be identical with return to url to avoid github pages client-side routing issue_
+_I set the callback url to be identical with return to url to avoid github pages client-side routing issue_ <br />
 **You can also add these environment variables as repository Secrets and setup github actiosn to utilize them**
 
 You also need to change the homepage in package.json:
