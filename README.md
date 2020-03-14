@@ -36,17 +36,11 @@ You can reference this tutorial for more details for github page deployment:
 
 I deployed this project to this github page for your reference: [http://juan3juan.github.io/budgetPlanner](http://juan3juan.github.io/budgetPlanner)
 
-### `npm run dev`
-
-For local test, please use npm run dev
-
-As this app
-
 ## Deploy to Heroku
 
-You can also deploy this project to Heroku using Heroku Dashboard or Heroku CLI
+You can also deploy this project to Heroku using Heroku Dashboard or Heroku CLI<br />
 Please reference this tutorial for Heroku deployment: [https://blog.heroku.com/deploying-react-with-zero-configuration](https://blog.heroku.com/deploying-react-with-zero-configuration)
 
-Notice, you can delete the REACT_APP_REPOSITORY in the .env file and the homepage in package.json since Heroku can run under root. .env file can also be deleted since you can add env variables through Heroku Dashboard or CLI
+Notice, you can delete the homepage in package.json since Heroku can run under root. <br />.env file can also be deleted since you can add env variables through Heroku Dashboard or CLI
 
 I also deployed this project to heroku for your reference: [https://budger-planner-heroku.herokuapp.com/](https://budger-planner-heroku.herokuapp.com/)
