@@ -6,21 +6,25 @@ After git clone the master branch to your local, in the project directory, you c
 
 ### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### `Auth0 configuration`
 
-Notice, you need to update the callback url and redirect url in the .env to: http://localhost:3000 to make it work
+I used Auth0 for authentication, in order to run the code in your local environment, you need to register Auth0 [Auth0](https://auth0.com/signup?&signUpData=%7B%22category%22%3A%22button%22%7D) and create Application with setting following params: <br />
+REACT_APP_AUTH0_CALLBACK_URL=http://localhost:3000 <br /> REACT_APP_AUTH0_RETURNTO_URL=REACT_APP_AUTH0_CALLBACK_URL=http://localhost:3000 <br />
+
+For details, please reference this tutorial: [https://auth0.com/docs/quickstart/spa/react](https://auth0.com/docs/quickstart/spa/react)<br />
+
+Once Auth0 is done, you can copy the domain and client id into the .env file and then you can run <bold>npm start</bold> to run the project locally.
 
 ### `npm run deploy`
 
 This will deploy the project into github page in your repository.
 open [http://gitUserName.github.io/yourrepository] to view it in the browser.
 
-Notice: since github page doesn't run project under root level, you need to change the following environment variable in the .env before deployment:
+Notice: since github page doesn't run project under root, you need to change the following environment variable in the .env before deployment:
 
-REACT_APP_AUTH0_CALLBACK_URL: [http://gitUserName.github.io/yourrepository]
-REACT_APP_AUTH0_RETURNTO_URL: [http://gitUserName.github.io/yourrepository]
-REACT_APP_REPOSITORY: yourrepository
+REACT_APP_AUTH0_CALLBACK_URL: [http://gitUserName.github.io/yourrepository] <br />
+REACT_APP_AUTH0_RETURNTO_URL: [http://gitUserName.github.io/yourrepository] <br />
+REACT_APP_REPOSITORY: yourrepository <br />
 
 You also need to change the homepage in package.json:
 
@@ -35,7 +39,7 @@ I deployed this project to this github page for your reference: [http://juan3jua
 
 For local test, please use npm run dev
 
-As this app uses Auth0 for authentication, in order to run the code in your local environment, you need to register Auth0 [Auth0](https://auth0.com/signup?&signUpData=%7B%22category%22%3A%22button%22%7D) and create Application with REACT_APP_AUTH0_CALLBACK_URL=http://localhost:3000 and REACT_APP_AUTH0_RETURNTO_URL=REACT_APP_AUTH0_CALLBACK_URL=http://localhost:3000
+As this app
 
 ## Deploy to Heroku
 
