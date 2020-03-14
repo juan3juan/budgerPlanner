@@ -66,6 +66,19 @@ const Budget = props => {
   };
   //#endregion
 
+  //#region reobtain Username if somehow budget page lost username
+  const { isAuthenticated, getProfile } = props.auth;
+  const authenticated = isAuthenticated();
+  //after authentication, get the username to App
+  if (authenticated) {
+    if (props.username === "") {
+      getProfile((profile, err) => {
+        props.setProfile(profile);
+      });
+    }
+  }
+  //#endregion
+
   // format salary expense and saving to USD
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
