@@ -5,7 +5,6 @@ import Budget from "./component/budget";
 import Nav from "./component/Nav";
 import Home from "./component/Home";
 import Auth from "./component/Auth/Auth";
-import Callback from "./component/Callback";
 
 function App(props) {
   let auth0 = new Auth(props.history);
@@ -60,10 +59,6 @@ function App(props) {
               <Redirect to="/" />
             )
           }
-        />
-        <Route
-          path="/Callback"
-          render={props => <Callback auth={auth0} {...props} />}
         />
       </div>
     </>
