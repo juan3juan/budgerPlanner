@@ -9,7 +9,7 @@ const Nav = props => {
   return (
     <nav>
       <ul>
-        <li style={{ width: "4%" }}>
+        <li className="liLogo">
           <img src={logo} alt="LOGO" className="navLogo" />
         </li>
         <li>

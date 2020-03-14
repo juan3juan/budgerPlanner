@@ -50,7 +50,12 @@ function App(props) {
           path="/budget"
           render={props =>
             auth0.isAuthenticated() ? (
-              <Budget auth={auth0} username={username} {...props} />
+              <Budget
+                auth={auth0}
+                setProfile={setProfileFunc}
+                username={username}
+                {...props}
+              />
             ) : (
               <Redirect to="/" />
             )
