@@ -8,17 +8,18 @@ After git clone the master branch to your local, in the project directory, you c
 
 #### `Auth0 configuration`
 
-I used Auth0 for authentication, in order to run the code in your local environment, you need to register Auth0 [Auth0](https://auth0.com/signup?&signUpData=%7B%22category%22%3A%22button%22%7D) and create Application with setting following params: <br />
-REACT_APP_AUTH0_CALLBACK_URL=http://localhost:3000 <br /> REACT_APP_AUTH0_RETURNTO_URL=REACT_APP_AUTH0_CALLBACK_URL=http://localhost:3000 <br />
+For this project, I used Auth0 for authentication. In order to run the code in your local environment, you need to register [Auth0](https://auth0.com/signup?&signUpData=%7B%22category%22%3A%22button%22%7D) and create Application with setting following params: <br />
+REACT_APP_AUTH0_CALLBACK_URL=http://localhost:3000/budgetPlanner <br />
+REACT_APP_AUTH0_RETURNTO_URL=http://localhost:3000/budgetPlanner <br />
 
 For details, please reference this tutorial: [https://auth0.com/docs/quickstart/spa/react](https://auth0.com/docs/quickstart/spa/react)<br />
 
-Once Auth0 is done, you can copy the domain and client id into the .env file and then you can run <bold>npm start</bold> to run the project locally.
+Once Auth0 is done, you can copy the domain and client id into the .env file and then you can run **npm start** to run the project locally.
 
 ### `npm run deploy`
 
 This will deploy the project into github page in your repository.
-open [http://gitUserName.github.io/yourrepository] to view it in the browser.
+open http://gitUserName.github.io/yourrepository to view it in the browser.
 
 Notice: since github page doesn't run project under root, you need to change the following environment variable in the .env before deployment:
 
