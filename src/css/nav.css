@@ -56,3 +56,8 @@ nav button {
   padding-right: 20px;
   color: white;
 }
+
+.navLogo {
+  width: 100%;
+  height: 100%;
+}

@@ -1,12 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/nav.css";
+import logo from "../img/logo.png";
+
 const Nav = props => {
   const { isAuthenticated, login, logout } = props.auth;
   const authenticated = isAuthenticated();
   return (
     <nav>
       <ul>
+        <li style={{ width: "4%" }}>
+          <img src={logo} alt="LOGO" className="navLogo" />
+        </li>
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -24,9 +29,9 @@ const Nav = props => {
             </button>
           )}
         </li>
-        <li className="liright greetings">
+        {/* <li className="liright greetings">
           {authenticated ? <p>Welcome! {props.username}</p> : null}
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

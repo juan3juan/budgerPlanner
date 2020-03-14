@@ -5,7 +5,7 @@
   margin-top: 1%;
   border-radius: 25px;
   border-style: dashed;
-  border-color: #086fd4;
+  border-color: #39ace7;
 }
 @media screen and (max-width: 1200px) {
   .container {
@@ -23,19 +23,19 @@
 }
 
 .header {
-  color: #405af1;
+  color: #39ace7;
   padding-top: 1%;
   padding-bottom: 4%;
 }
 .largebottom {
-  padding-bottom: 20%;
+  padding-bottom: 10%;
 }
 .padtop {
   padding-top: 20px;
 }
 .buttoncolor {
   color: white;
-  background-color: #3f51b5;
+  background-color: #39ace7;
 }
 .buttoncolor:hover {
   -webkit-transform: scale(1.1);
