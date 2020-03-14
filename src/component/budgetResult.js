@@ -2,7 +2,8 @@ import React from "react";
 import { FormControl, TextField, Typography } from "@material-ui/core";
 import "../css/planner.css";
 const BudgetResult = props => {
-  let values = props.initialValues;
+  let values = props.result;
+  let format = props.formatter.format;
   return (
     <>
       <div className="container">
@@ -14,7 +15,7 @@ const BudgetResult = props => {
             <TextField
               id="outlined-basic"
               label="Your Salary"
-              value={"$ " + values.salary}
+              value={format(values.salary)}
               variant="outlined"
             />
           </FormControl>
@@ -34,7 +35,7 @@ const BudgetResult = props => {
             <TextField
               id="outlined-basic"
               label="Your Expense"
-              value={"$ " + values.expense}
+              value={format(values.expense)}
               variant="outlined"
             />
           </FormControl>
@@ -44,7 +45,7 @@ const BudgetResult = props => {
             <TextField
               id="outlined-basic"
               label="Your Saving"
-              value={"$ " + values.saving}
+              value={format(values.saving)}
               variant="outlined"
             />
           </FormControl>

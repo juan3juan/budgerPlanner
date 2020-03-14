@@ -12,7 +12,8 @@ import {
 } from "@material-ui/core";
 
 const BudgetCalculator = props => {
-  let values = props.initialValues;
+  let values = props.values;
+  let format = props.formatter.format;
 
   //Slide Marks
   const marks = [
@@ -55,7 +56,7 @@ const BudgetCalculator = props => {
             <TextField
               id="outlined-basic"
               label="Expense"
-              value={"$ " + values.expense}
+              value={values.expense ? format(values.expense) : ""}
               variant="outlined"
             />
           </FormControl>
@@ -66,7 +67,7 @@ const BudgetCalculator = props => {
               id="outlined-basic"
               center="true"
               label="Saving"
-              value={"$ " + values.saving}
+              value={values.saving ? format(values.saving) : ""}
               variant="outlined"
             />
           </FormControl>

@@ -47,29 +47,44 @@ const Budget = props => {
       }
     }
   };
-  const handleSubmit = e => {
-    e.preventDefault();
-    if (values.salary === null || values.salary === "")
-      setValues({ ...values, errormessage: "Please input salary first!" });
-    else setdoneStatus(true);
-  };
-  const handleback = () => {
-    setdoneStatus(false);
-    // setValues(values);
+  const handleSubmit = isDoneCal => {
+    // jump to result
+    if (isDoneCal === true) {
+      if (values.salary === "") {
+        setValues({
+          ...values,
+          errormessage: "Please input your Salary first"
+        });
+      } else {
+        setdoneStatus(isDoneCal);
+      }
+    }
+    // back to calculate
+    else {
+      setdoneStatus(isDoneCal);
+    }
   };
   //#endregion
 
+  // format salary expense and saving to USD
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD"
+  });
+
   return donestatus ? (
     <BudgetResult
-      initialValues={values}
+      result={values}
+      formatter={formatter}
       username={props.username}
-      handleback={handleback}
+      handleback={() => handleSubmit(false)}
     />
   ) : (
     <BudgetPlanner
-      initialValues={values}
+      values={values}
+      formatter={formatter}
       percentageChange={percentageChange}
-      handleSubmit={handleSubmit}
+      handleSubmit={() => handleSubmit(true)}
       handleChange={handleChange}
     />
   );
