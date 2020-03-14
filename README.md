@@ -21,11 +21,14 @@ Once Auth0 is done, you can copy the domain and client id into the .env file and
 This will deploy the project into github page in your repository.
 open http://gitUserName.github.io/yourrepository to view it in the browser.
 
-Notice: since github page doesn't run project under root, you need to change the following environment variable in the .env before deployment:
-
+Notice: since github page doesn't run project under root, you need to add .env file and add the environment variable in the .env before deployment:
+REACT_APP_AUTH0_DOMAIN: Auth0 domain <br />
+REACT_APP_AUTH0_CLIENT_ID: Autho0 Client ID <br />
 REACT_APP_AUTH0_CALLBACK_URL: [http://gitUserName.github.io/yourrepository] <br />
 REACT_APP_AUTH0_RETURNTO_URL: [http://gitUserName.github.io/yourrepository] <br />
 REACT_APP_REPOSITORY: yourrepository <br />
+
+**You can also add these environment variables as reposotory Secrets and setup github actiosn to utilize it**
 
 You also need to change the homepage in package.json:
 
@@ -38,6 +41,7 @@ I deployed this project to this github page for your reference: [http://juan3jua
 
 ## Deploy to Heroku
 
+**Heroku is recommended since it handles clietn side routing better and is easier to utilzie environment variables**
 You can also deploy this project to Heroku using Heroku Dashboard or Heroku CLI<br />
 Please reference this tutorial for Heroku deployment: [https://blog.heroku.com/deploying-react-with-zero-configuration](https://blog.heroku.com/deploying-react-with-zero-configuration)
 
