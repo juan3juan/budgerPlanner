@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 require("dotenv").config();
 
 ReactDOM.render(
-  <Router basename={process.env.REACT_APP_REPOSITORY}>
+  <Router>
     <Route component={App} />
   </Router>,
   document.getElementById("root")

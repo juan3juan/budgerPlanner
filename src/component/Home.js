@@ -10,9 +10,9 @@ const Home = props => {
 
   useEffect(() => {
     //Handle authentication if expected values are in the URL.
-    if (/access_token|id_token|error/.test(props.location.hash)) {
-      props.auth.handleAuthentication();
-    }
+    // if (/access_token|id_token|error/.test(props.location.hash)) {
+    //   props.auth.handleAuthentication();
+    // }
   }, []);
 
   //after authentication, get the username to App

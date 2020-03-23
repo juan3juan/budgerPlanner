@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Budget from "./component/budget";
 import Nav from "./component/Nav";
 import Home from "./component/Home";
+import Callback from "./component/Callback";
 import Auth from "./component/Auth/Auth";
 
 function App(props) {
@@ -59,6 +60,10 @@ function App(props) {
               <Redirect to="/" />
             )
           }
+        />
+        <Route
+          path="/callback"
+          render={props => <Callback auth={auth0} {...props} />}
         />
       </div>
     </>
